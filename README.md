@@ -6,22 +6,19 @@ Google Tag Manager コンテナIDを管理画面から登録し、レイアウ�
 ## 使用
 
 ### head内のタグ出力
-
-\<head\>タグに属性がなければ、その直後にhead用のGTMタグエレメントを出力し、  
-属性があれば、'/<meta.*?charset=\".*>/' の直前に出力されます。  
+<pre><head></pre>
+タグに属性がなければ、その直後にhead用のGTMタグエレメントを出力し、  
+属性があれば、
+<pre><meta.*?charset=\".*></pre> の直前に出力されます。  
 テンプレートにすでにGTMタグがあれば、出力されません。
-<pre>  
-/gtm.start/i
-</pre>
-の文字列で検索しています。Config/setting.phpで変更できます）  
+<pre>/gtm.start/i</pre>
+の文字列で検索しています。(Config/setting.phpで変更できます）  
 
 ### body開始直後のタグ出力
 
-\<body\>タグの直後にbody用のGTMタグエレメントを出力します。  
+<pre><body></pre>タグの直後にbody用のGTMタグエレメントを出力します。  
 テンプレートにすでにGTMタグがあれば、出力されません。  
-<pre>
-（'/iframe src\=\"https\:\/\/www\.googletagmanager\.com/i' の文字列で検索しています。Config/setting.phpで変更できます）  
-</pre>
+<pre>/iframe src\=\"https\:\/\/www\.googletagmanager\.com/i</pre>の文字列で検索しています。(Config/setting.phpで変更できます）  
 
 ### 自動出力の停止
 
