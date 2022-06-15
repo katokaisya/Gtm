@@ -9,7 +9,7 @@ Google Tag Manager コンテナIDを管理画面から登録し、レイアウ�
 \<head\>
 タグに属性がなければ、その直後にhead用のGTMタグエレメントを出力し、  
 属性があれば、
-<pre>\<meta.*?charset=\".\*\></pre> の直前に出力されます。  
+\<meta.*?charset=\".\*\> の直前に出力されます。  
 テンプレートにすでにGTMタグがあれば、出力されません。
 <pre>/gtm.start/i</pre>
 の文字列で検索しています。(Config/setting.phpで変更できます）  
