@@ -3,7 +3,7 @@
 baserCMS4系専用 
 Google Tag Manager コンテナIDを管理画面から登録し、レイアウトテンプレート描画時に、headタグ内とbody開始タグ直後にelementを出力します。
 
-## 使用
+## 仕様
 
 ### head内のタグ出力
 \<head\>
