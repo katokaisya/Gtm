@@ -16,8 +16,13 @@ class GtmViewEventListener extends BcViewEventListener {
 		}
 		$View = $event->subject;
 		// site_configテーブルに保存されたGtm.keyのレコードを取得
-		$key = $View->BcBaser->siteConfig[Configure::read('Gtm.keyName')];
-		if (empty($key)) return true;
+		$siteConfig = $View->BcBaser->siteConfig;
+		// noticeエラー解消
+		if (empty($siteConfig[Configure::read('Gtm.keyName')])) {
+			return true;
+		} else {
+			$key = $siteConfig[Configure::read('Gtm.keyName')];
+		}
 
 		if (strpos($key, 'GTM-') === false) {
 			$key = 'GTM-'. $key;
