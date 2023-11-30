@@ -11,7 +11,8 @@ class GtmViewEventListener extends BcViewEventListener {
 
 	public function afterLayout(CakeEvent $event) {
 		// 自動追加がfalseなら何もしない。
-		if (!Configure::read('Gtm.auto')) {
+		// 管理画面も何もしない。
+		if (!Configure::read('Gtm.auto') || BcUtil::isAdminSystem()) {
 			return true;
 		}
 		$View = $event->subject;
